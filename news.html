@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Новости</title>
+  <link rel="icon" href="i2.jpg">
+  <script>
+    function toggleNews(button) {
+        const fullText = button.nextElementSibling;
+        const isVisible = fullText.style.display === 'block';
+        fullText.style.display = isVisible ? 'none' : 'block';
+        button.textContent = isVisible ? 'Показать' : 'Скрыть';
+    }
+</script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #1f4db6;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .news-container {
+      max-width: 1100px;
+      margin: 0 auto 60px;
+      padding: 0 260px 0 20px;
+    }
+
+    .news-card {
+      background-color: #fff;
+      border: 1px solid #dfe3e6;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .news-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .news-date {
+      font-size: 13px;
+      color: #8a8f99;
+      margin-bottom: 6px;
+    }
+
+    .news-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1f4db6;
+      margin-bottom: 10px;
+    }
+
+    .news-preview {
+      font-size: 16px;
+      color: #3b3b3b;
+    }
+
+    .news-full {
+      display: none;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .toggle-btn {
+      margin-top: 14px;
+      background-color: #1f4db6;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s ease;
+    }
+
+    .toggle-btn:hover {
+      background-color: #163c91;
+    }
+
+    a {
+      color: #1f4db6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .up-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #3498db;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .up-button:hover {
+      background: #2980b9;
+    }
+    header, footer {
+      padding: 5px;
+      text-align: center;
+      color: white;
+    }
+    .top-button:hover {
+      background-color: #163c91;
+    }
+    .main-menu nav {
+      display: flex;
+      justify-content: center; 
+      gap: 25px;
+      padding: 15px 20px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+    .main-menu a {
+      color: #cbc4c4;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .main-menu a:hover {
+      background-color: #e6f0ff;
+      color: #007bff;
+    }
+
+    .main-menu a.active {
+      background-color: #007bff;
+      color: white;
+      pointer-events: none;
+    }
+
+    header, footer {
+      background-color: #21309b;
+      padding: 15px;
+      margin: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<a name="top"></a>
+    <header class="main-menu">
+        <div>
+            <a href="company.html">О компании</a>
+            <a href="news.html" class="active">Новости</a>
+            <a href="exchange_rate.html">Курс валюты</a>
+            <a href="contact_data.html">Контактные данные</a>
+            <a href="video.html">Видео</a>
+        </div>
+    </header> 
+<header style="background-color: white;">
+  <h1>Новости Циан</h1>
+</header>
+
+<main class="news-container">
+  <div class="news-card">
+    <div class="news-date">20 мая 2025</div>
+    <div class="news-title">Стоимость строительства будут считать по-новому с 2026 года</div>
+    <div class="news-preview">Регламентирующий ценообразование в строительстве закон могут 
+        принять в I полугодии 2026 года. Об этом сообщает ТАСС со ссылкой на замминистра 
+        строительства и ЖКХ Сергея Музыченко.</div>
+    <button class="toggle-btn" onclick="toggleNews(this)">Показать</button>
+    <div class="news-full">Регламентирующий ценообразование в строительстве закон могут 
+        принять в I полугодии 2026 года. Об этом сообщает ТАСС со ссылкой на замминистра 
+        строительства и ЖКХ Сергея Музыченко.<br>
+        По его словам, у каждой категории объекта — жильё, социальные объекты, 
+        дороги — будут свои индексы-дефляторы. Ожидается, что новая схема позволит более 
+        точно прогнозировать инфляцию на период реализации проекта. Следующим нововведением 
+        должно стать принятие законопроекта по формульной цене.</div></div>
+  </div>
+
+  <div class="news-card">
+    <div class="news-date">19 мая 2025</div>
+    <div class="news-title">Элитные новостройки в Москве за 20 лет подорожали в 10 раз</div>
+    <div class="news-preview">Средняя стоимость «квадрата» элитного жилья в Москве за 20 лет выросла на 1097%, 
+        сообщили «РБК Недвижимости» аналитики агентства NF Group. Цена «квадрата»</div>
+    <button class="toggle-btn" onclick="toggleNews(this)">Показать</button>
+    <div class="news-full">Средняя стоимость «квадрата» элитного жилья в Москве за 20 лет выросла на 1097%, 
+        сообщили «РБК Недвижимости» аналитики агентства NF Group. Цена «квадрата» 
+        такой недвижимости к концу первого квартала 2025 года достигла 2,07 млн рублей. 
+        Это рекордное значение за всю историю наблюдений.<br>
+        На рынке элитного жилья были отмечены незначительные колебания, связанные с 
+        изменением экономической ситуации в стране. В целом элитный сегмент в последние 
+        года демонстрировал стабильность. Квартиры в элитных новостройках планомерно дорожали. 
+        Этот сегмент укрепил свой статус надёжного инструмента для сохранения капитала, говорится 
+        в исследовании.</div>
+  </div>
+
+  <div class="news-card">
+    <div class="news-date">19 мая 2025</div>
+    <div class="news-title">Спрос на студии и однушки снижается</div>
+    <div class="news-preview">На вторичном рынке снижается популярность однокомнатных квартир, при этом 
+        растёт спрос на двушки и трёшки, рассказали «РБК Недвижимости» в федеральном агентстве 
+        недвижимости «Этажи».</div>
+    <button class="toggle-btn" onclick="toggleNews(this)">Показать</button>
+    <div class="news-full">На вторичном рынке снижается популярность однокомнатных квартир, при этом 
+        растёт спрос на двушки и трёшки, рассказали «РБК Недвижимости» в федеральном агентстве 
+        недвижимости «Этажи».<br>
+        В апреле доля тех, кто покупает студии и однокомнатные квартиры на вторичном рынке, 
+        уменьшилась на 6,7 п.п. по сравнению прошлогодним показателем. Она составила 46,7%. 
+        В апреле 2024 года небольшие квартиры выбирали 53,4% покупателей.</div>
+  </div>
+
+  <div class="news-card">
+    <div class="news-date">16 мая 2025</div>
+    <div class="news-title">По семейной ипотеке на вторичку за месяц выдали 2 тыс. кредитов</div>
+    <div class="news-preview">За первый месяц действия льготной ипотеки на вторичку было оформлено 2 тыс. 
+        таких кредитов на сумму 7 млрд рублей. Об этом сообщает «Российская газета» со ссылкой на 
+        данные аналитиков «Дом.РФ».</div>
+    <button class="toggle-btn" onclick="toggleNews(this)">Показать</button>
+    <div class="news-full">За первый месяц действия льготной ипотеки на вторичку было оформлено 2 тыс. 
+        таких кредитов на сумму 7 млрд рублей. Об этом сообщает «Российская газета» со ссылкой на 
+        данные аналитиков «Дом.РФ». <br>
+        Средний размер займа — 3,5 млн рублей. Доля семейной ипотеки на вторичку составила лишь 
+        5% месячного объёма по всей субсидируемой программе.</div>
+  </div>
+
+  <div class="news-card">
+    <div class="news-date">13 мая 2025</div>
+    <div class="news-title">Квартиру, купленную в рассрочку до брака, не признали совместным имуществом</div>
+    <div class="news-preview">Большую часть средств супруги выплатили совместно в период брака. Гражданский спор рассмотрел Верховный суд.</div>
+    <button class="toggle-btn" onclick="toggleNews(this)">Показать</button>
+    <div class="news-full">Верховный суд разъяснил, считается ли квартира, 
+        приобретённая до брака, но оплаченная после, общей собственностью супругов, пишет «Российская газета».</div>
+  </div>
+  <div class="news-card">
+    <div class="news-date">12 мая 2025</div>
+    <div class="news-title">ВТБ объявил об отмене комиссий для застройщиков</div>
+    <div class="news-preview">Из-за комиссий стоимость жилья увеличивается, считают в Центробанке.</div>
+    <button class="toggle-btn" onclick="toggleNews(this)">Показать</button>
+    <div class="news-full">ВТБ не взимает комиссии с застройщиков по ипотечным программам. 
+        Об этом рассказал ТАСС глава банка Андрей Костин. <br>
+        По словам Костина, банк уже отменил комиссии с застройщиков при выдаче ипотеки.</div>
+  </div>
+
+  <div class="news-card">
+    <div class="news-date">6 мая 2025</div>
+    <div class="news-title">Крупные банки продолжают снижать ставки по рыночной ипотеке</div>
+    <div class="news-preview">К концу года значения, по мнению эксперта, могут опуститься до 17–18% годовых.</div>
+    <button class="toggle-btn" onclick="toggleNews(this)">Показать</button>
+    <div class="news-full">Перечень крупных российских банков, снизивших ставки по рыночной ипотеке, пополнил Совкомбанк. 
+        Об изменении показателей сообщила пресс-служба кредитной организации.</div>
+  </div>
+
+  <div class="news-card">
+    <div class="news-date">5 мая 2025</div>
+    <div class="news-title">Однокомнатные квартиры в новостройках Москвы заметно подорожали в 2021-2022 годах, когда действовала массовая 
+        льготная ипотека, а ставки по рыночной ипотеке были низкими.</div>
+    <div class="news-preview">Пик роста цен пришёлся на 2021-2022 годы.</div>
+    <button class="toggle-btn" onclick="toggleNews(this)">Показать</button>
+    <div class="news-full">Однокомнатные квартиры в новостройках Москвы заметно подорожали в 2021-2022 годах, когда действовала массовая 
+        льготная ипотека, а ставки по рыночной ипотеке были низкими. Всего за 5 лет цены на однушки в 
+        столичных новостройках выросли на 86%, рассказали аналитики, опрошенные изданием «РБК Недвижимость». 
+        На вторичном рынке цены на однокомнатные квартиры за этот период выросли на 32%.</div>
+  </div>
+
+  <div class="news-card">
+    <div class="news-date">30 апреля 2025</div>
+    <div class="news-title">Более половины заёмщиков оформляют ипотеку на ИЖС с покупкой земли</div>
+    <div class="news-preview">Более 60% заёмщиков, оформляющих ипотеку на ИЖС, берут кредит на 
+        строительство дома и покупку земли, рассказали в банке «Дом.РФ».
+        Эксперты банка проанализировали спрос на ипотеку на индивидуальное...</div>
+    <button class="toggle-btn" onclick="toggleNews(this)">Показать</button>
+    <div class="news-full">Более 60% заёмщиков, оформляющих ипотеку на ИЖС, берут кредит на 
+        строительство дома и покупку земли, рассказали в банке «Дом.РФ». <br>
+        Эксперты банка проанализировали спрос на ипотеку на индивидуальное 
+        жилищное строительство с начала этого года. Выяснилось, что 65% клиентов, 
+        оформляющих кредит на строительство дома, приобретают на заёмные средства 
+        земельные участки.</div>
+  </div>
+
+  <div class="news-card">
+    <div class="news-date">29 апреля 2025</div>
+    <div class="news-title">Новый сервис Циана поможет выгодно и безопасно продать квартиру</div>
+    <div class="news-preview">Он поможет клиентам, желающим продать квартиру, подобрать надёжного и 
+        опытного специалиста, который сопроводит их на всём пути до совершения сделки.</div>
+    <button class="toggle-btn" onclick="toggleNews(this)">Показать</button>
+    <div class="news-full">Сервис Циан начал функционировать в полном объёме. 
+        Он поможет клиентам, желающим продать квартиру, подобрать надёжного и 
+        опытного специалиста, который сопроводит их на всём пути до совершения сделки. <br>
+        Агент проанализирует рынок, поможет с оценкой стоимости жилья и 
+        оформит объявление, которое получит максимальное продвижение на 
+        нашей платформе. Также он возьмёт на себя ответы на звонки, показы 
+        объектов, торги с потенциальными покупателями — время и нервы собственников 
+        будут в безопасности.</div>
+  </div>
+</main>
+<footer>
+<p><em>Мы гордимся доверием наших клиентов и качеством нашей работы.</em></p>
+  <p>&copy; 2025 ООО «Циан». Все права защищены.</p>
+</footer>
+<a class="up-button" href="#top">↑ Наверх</a>
+
+</body>
+</html>

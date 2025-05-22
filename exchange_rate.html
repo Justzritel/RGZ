@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Курс валюты — Новозеландский доллар (NZD)</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="rate.js"></script>
+  <link rel="icon" href="i2.jpg">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0 20px;
+      background-color: #ffffff;
+      color: #223368;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #223368;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .converter, .chart-container {
+      max-width: 700px;
+      margin: 30px auto;
+      background: #f4f7fb;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccd4e0;
+      border-radius: 6px;
+      background-color: #ffffff;
+    }
+
+    input:focus {
+      border-color: #00b0f0;
+      outline: none;
+    }
+
+    #result {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 15px;
+      color: #00b0f0;
+    }
+
+    canvas {
+      margin-top: 30px;
+    }
+
+    .highlight {
+      background-color: #eaf6fe;
+      padding: 12px;
+      border-left: 5px solid #00b0f0;
+      margin-top: 15px;
+    }
+    .main-menu {
+      display: flex;
+      justify-content: center; 
+      gap: 25px;
+      padding: 15px 20px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    .main-menu a {
+      color: #cbc4c4;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .main-menu a:hover {
+      background-color: #e6f0ff;
+      color: #007bff;
+    }
+
+    .main-menu a.active {
+      background-color: #007bff;
+      color: white;
+      pointer-events: none;
+    }
+
+    header, footer {
+      background-color: #21309b;
+      text-align: center;
+      padding: 15px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header class="main-menu">
+  <nav>
+    <a href="company.html">О компании</a>
+    <a href="news.html">Новости</a>
+    <a href="exchange_rate.html" class="active">Курс валюты</a>
+    <a href="contact_data.html">Контактные данные</a>
+    <a href="video.html">Видео</a>
+  </nav>
+</header>
+
+<h1>Курс валют: Новозеландский доллар (NZD)</h1>
+
+<div class="converter">
+  <h2>Калькулятор валют</h2>
+  <label for="rub">Сумма в рублях (RUB):</label>
+  <input type="number" id="rub" placeholder="Введите сумму в рублях">
+
+  <label for="nzd">Сумма в новозеландских долларах (NZD):</label>
+  <input type="number" id="nzd" placeholder="Введите сумму в NZD">
+
+  <div id="result"></div>
+</div>
+
+<div class="chart-container">
+  <h2>Динамика курса за последний месяц</h2>
+  <canvas id="rateChart" height="100"></canvas>
+  <div id="info" class="highlight" style="display:none;"></div>
+</div>
+
+<footer>
+  <small style="color: white;">&copy; 2025 ООО «Циан». Все права защищены.</small>
+</footer>
+
+</body>
+</html>

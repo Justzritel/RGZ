@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Видео — Компания</title>
+  <link rel="icon" href="i2.jpg">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      color: #003366;
+      margin: 0;
+      padding: 0 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    .main-menu {
+      display: flex;
+      justify-content: center; 
+      gap: 25px;
+      padding: 15px 20px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    .main-menu a {
+      color: #cbc4c4;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .main-menu a:hover {
+      background-color: #e6f0ff;
+      color: #007bff;
+    }
+
+    .main-menu a.active {
+      background-color: #007bff;
+      color: white;
+      pointer-events: none;
+    }
+
+    header, footer {
+      background-color: #21309b;
+      text-align: center;
+      padding: 15px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+<header class="main-menu">
+    <div>
+        <a href="company.html">О компании</a>
+        <a href="news.html">Новости</a>
+        <a href="exchange_rate.html">Курс валюты</a>
+        <a href="contact_data.html">Контактные данные</a>
+        <a href="video.html" class="active">Видео</a>
+    </div>
+</header>
+  <div class="container">
+    <h1>Видео о компании</h1>
+    <iframe 
+      src="https://www.youtube.com/embed/2LcRANTaLbI"
+      title="Видео о компании"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+<footer style="color: white;">
+    <p><em>Мы гордимся доверием наших клиентов и качеством нашей работы.</em></p>
+  <p>&copy; 2025 ООО «Циан». Все права защищены.</p>
+</footer>
+</body>
+</html>
